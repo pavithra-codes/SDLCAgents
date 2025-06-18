@@ -1,0 +1,18 @@
+Please provide the following details for BRD generation:
+Project Name: oracle to redshift migration
+Project Purpose: modernize the technology stack and leverage aws cloud to provide faster analytics and insights
+Scope Area: recreate the existing data warehouse from onpremise oracle database into aws redshift
+Enter in-scope items (one per line, press Enter twice to finish):
+table migration
+stored procedure migration
+data integration using aws glue and emr
+
+Enter out-of-scope items (one per line, press Enter twice to finish):
+infrastructure setup
+PII data processing
+administrative tasks
+
+Enter stakeholders (one per line, press Enter twice to finish):
+IT department
+marketing teams
+dealers
