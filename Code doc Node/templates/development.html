@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>ABAP Code Documentation</title>
+</head>
+<body>
+    <h1>Upload ABAP Code (.txt)</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="code_file" accept=".txt" required>
+        <button type="submit">Generate Documentation</button>
+    </form>
+
+    {% if output %}
+        <h2>Generated Documentation:</h2>
+        <pre>{{ output }}</pre>
+    {% endif %}
+</body>
+</html>
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ABAP Documentation Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+        .button {
+            margin-top: 20px;
+        }
+        .message {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload ABAP Code</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="code_file" accept=".txt" required>
+            <button type="submit">Generate Documentation</button>
+        </form>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        {% if output %}
+            <h2>Generated Documentation</h2>
+            <textarea readonly>{{ output }}</textarea>
+        {% endif %}
+
+        {% if pdf_filename %}
+            <div class="button">
+                <a href="{{ url_for('development.download_file', filename=pdf_filename) }}">
+                    <button> Download PDF</button>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
