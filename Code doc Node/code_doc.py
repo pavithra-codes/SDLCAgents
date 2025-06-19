@@ -7,7 +7,6 @@ from datetime import datetime
 import os
 import time
 import re
-
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
