@@ -116,7 +116,6 @@ graph.add_edge("generate", "output_pdf")
 graph.add_edge("output_pdf", END)
 app = graph.compile()
 
-# Run
 initial_state = {
     "brd": json.dumps(brd_data),
     "tdd_text": "",
